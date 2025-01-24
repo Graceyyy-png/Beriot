@@ -1,0 +1,25 @@
+// responsive.scss
+@mixin mobile {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (min-width: 601px) and (max-width: 1024px) {
+      @content;
+    }
+  }
+  
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }

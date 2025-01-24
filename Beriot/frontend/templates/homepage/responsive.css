@@ -1,0 +1,146 @@
+/* Responsive Breakpoints */
+:root {
+    --breakpoint-xs: 480px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+}
+
+/* Mobile-First Responsive Styles */
+@media screen and (max-width: 768px) {
+    /* Header Responsive */
+    .main-header {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .logo img {
+        max-width: 150px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .main-nav ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Search Section Responsive */
+    .search-section {
+        padding: 0.5rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .search-input,
+    .category-select,
+    .search-button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    /* Product Grid Responsive */
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+
+    /* Featured Categories Responsive */
+    .featured-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-card {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    /* Footer Responsive */
+    .footer-columns {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Tablet Responsive */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Desktop Responsive Adjustments */
+@media screen and (min-width: 993px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Responsive Typography */
+html {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Flexbox Responsive Utilities */
+.flex-responsive {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-responsive > * {
+    flex: 1 1 300px;
+    margin: 0.5rem;
+}
+
+/* Responsive Spacing */
+.responsive-padding {
+    padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .responsive-padding {
+        padding: 0.5rem;
+    }
+}
